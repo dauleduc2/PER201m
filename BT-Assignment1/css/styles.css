@@ -1,62 +1,52 @@
 body {
-  padding: 50px 0 0 0;
-  z-index: 0;
+        padding: 50px 0 0 0;
+        z-index: 0;
 }
 
 .navbar-dark {
-  background-color: #512da8;
+        background-color: #512DA8;
 }
 
 .bg-purple {
-  background-color: purple;
+        background-color: purple;
 }
 .bg-purple-300 {
-  background-color: rgba(211, 4, 211, 0.493);
+        background-color: rgba(211, 4, 211, 0.493);
 }
 .text-white {
-  color: white;
+        color: white;
 }
 
 .row-header {
-  margin: 0px auto;
-  padding: 0px;
+        margin: 0px auto;
+        padding: 0px;
 }
 
 .row-content {
-  margin: 0px auto;
-  padding: 50px 0px 50px 0px;
-  border-bottom: 1px ridge;
-  min-height: 400px;
+        margin: 0px auto;
+        padding: 50px 0px 50px 0px;
+        border-bottom: 1px ridge;
+        min-height: 400px;
 }
 
 .footer {
-  background: #d1c4e9;
-  margin: 0px auto;
-  padding: 20px 0px 20px 0px;
+        background: #d1c4e9;
+        margin: 0px auto;
+        padding: 20px 0px 20px 0px;
 }
 
 .jumbotron {
-  padding: 70px 30px 70px 30px;
-  margin: 0px auto;
-  background: #9575cd;
-  color: floralwhite;
+        padding: 70px 30px 70px 30px;
+        margin: 0px auto;
+        background: #9575cd;
+        color: floralwhite;
 }
 
 address {
-  font-size: 80%;
-  margin: 0px;
-  color: #0f0f0f;
+        font-size: 80%;
+        margin: 0px;
+        color: #0f0f0f;
 }
 
-.flex {
-  display: flex;
-}
-.gap-5 {
-  gap: 20px;
-}
-.ml-1 {
-  margin-left: 4px;
-}
-.mr-1 {
-  margin-right: 4px;
-}
+
+      
