@@ -66,10 +66,10 @@
             </li>
           </ul>
         </div>
+        <a id="loginModalButton" href="#" class="navbar-text"
+          ><span class="fa fa-sign-in"></span> Login</a
+        >
       </div>
-      <a id="loginModalButton" href="#" class="navbar-text"
-        ><span class="fa fa-sign-in"></span> Login</a
-      >
     </nav>
     <div id="loginModal" class="modal fade" role="dialog">
       <div class="modal-dialog modal-lg" role="content">
@@ -148,14 +148,25 @@
             <button
               id="reserveFormButton"
               class="btn btn-block nav-link btn-warning"
+              data-toggle="tooltip"
+              data-html="true"
+              title="Or call us at <br><strong>+0869025867</strong>"
               href=""
             >
               Resever table
             </button>
           </div>
         </div>
-        <div id="reserveForm" class="modal fade text-dark" role="dialog">
-          <div class="modal-dialog modal-lg" role="content">
+        <div
+          id="reserveForm"
+          style="margin: 0"
+          class="modal fade text-dark row"
+          role="dialog"
+        >
+          <div
+            class="col-12 col-sm-8 mt-5 m-0 mx-auto pr-0 modal-dialog"
+            role="content"
+          >
             <div class="modal-header">
               <h4 class="modal-title">Reserver a table</h4>
               <button class="close" data-dismiss="modal" type="button">
@@ -165,10 +176,6 @@
             <div class="modal-content">
               <div class="modal-body">
                 <form action="" class="container">
-                  <!-- <div class="card-header bg-warning">
-                              <h3>Resever a table</h3>
-                           </div> -->
-
                   <div class="form-group row">
                     <label for="" class="form-check-label col-sm-3"
                       >Num of Guests</label
@@ -214,10 +221,10 @@
                         type="radio"
                         class="form-check-input"
                         name="inlineRadioOptions"
-                        id="inlineRadio4"
-                        value="option4"
+                        id="inlineRadio3"
+                        value="option3"
                       />
-                      <label for="inlineRadio4" class="form-check-label"
+                      <label for="inlineRadio3" class="form-check-label"
                         >4</label
                       >
                     </div>
@@ -226,10 +233,10 @@
                         type="radio"
                         class="form-check-input"
                         name="inlineRadioOptions"
-                        id="inlineRadio5"
-                        value="option5"
+                        id="inlineRadio3"
+                        value="option3"
                       />
-                      <label for="inlineRadio5" class="form-check-label"
+                      <label for="inlineRadio3" class="form-check-label"
                         >5</label
                       >
                     </div>
@@ -238,10 +245,10 @@
                         type="radio"
                         class="form-check-input"
                         name="inlineRadioOptions"
-                        id="inlineRadio6"
-                        value="option6"
+                        id="inlineRadio3"
+                        value="option3"
                       />
-                      <label for="inlineRadio6" class="form-check-label"
+                      <label for="inlineRadio3" class="form-check-label"
                         >6</label
                       >
                     </div>
@@ -257,13 +264,16 @@
                         class="btn-group btn-group-toggle"
                         data-toggle="buttons"
                       >
-                        <label class="btn btn-success active">
+                        <label
+                          id="defaultSelection"
+                          class="btn btn-success active focus"
+                        >
                           <input
                             type="radio"
                             name="section"
                             id="section1"
                             autocomplete="off"
-                            checked=""
+                            checked="true"
                           />Non-smoking
                         </label>
                         <label class="btn btn-danger ml-1">
@@ -283,7 +293,18 @@
                       >Date and Time</label
                     >
                     <div>
-                      <input type="datetime-local" name="" placeholder="Date" />
+                      <input
+                        type="text"
+                        class="px-1"
+                        name=""
+                        placeholder="date"
+                      />
+                      <input
+                        type="text"
+                        class="px-1"
+                        name=""
+                        placeholder="time"
+                      />
                     </div>
                   </div>
                   <div class="form-group row">
@@ -357,7 +378,7 @@
         </div>
       </div>
     </div>
-    <div class="row row content">
+    <div class="row row-content">
       <button class="btn btn-danger btn-sm" id="carouselButton">
         <span id="carousel-button-icon" class="fa fa-pause"></span>
       </button>
@@ -391,7 +412,7 @@
           </div>
         </div>
       </div>
-
+      <hr />
       <div class="row row-content align-items-center">
         <div class="col-12 col-sm-4 order-sm-first col-md-3">
           <h3>This Month's Promotions</h3>
@@ -418,9 +439,9 @@
           </div>
         </div>
       </div>
-
+      <hr />
       <div class="row row-content align-items-center">
-        <div class="col-12 col-sm-4 order-sm-last col-md-3">
+        <div class="col-12 col-sm-4 order-sm-last col-md-4">
           <h3>Meet our Culinary Specialists</h3>
         </div>
         <div class="media">
@@ -448,7 +469,7 @@
         <div class="row">
           <div class="col-4 offset-1 col-sm-2">
             <h5>Links</h5>
-            <ul>
+            <ul class="list-unstyled">
               <li><a href="#">Home</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#">Menu</a></li>
@@ -522,11 +543,13 @@
     });
 
     $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+
       $("#loginModalButton").click(function () {
         $("#loginModal").modal("toggle");
       });
+
       $("#reserveFormButton").click(function () {
-        console.log("button click reserve");
         $("#reserveForm").modal("toggle");
       });
     });
