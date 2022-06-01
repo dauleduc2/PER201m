@@ -5,6 +5,15 @@ $background-pale: #d1c4e9;
 
 $carousel-item-height: 700px;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  line-height: normal;
+}
+
 @mixin zero-margin($pad-up-dn, $pad-left-right) {
   margin: 0px auto;
   padding: $pad-up-dn $pad-left-right;
@@ -97,4 +106,37 @@ body {
 }
 .px-50 {
   padding: 0 50px;
+}
+
+@media screen and (min-width: 576px) {
+  .modal-dialog {
+    max-width: 66.666667% !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .row-content {
+    padding: 10px 10px !important;
+  }
+  .carousel-item {
+    height: 250px !important;
+    img {
+      width: 85% !important;
+      min-height: 100%;
+      margin: auto;
+    }
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
+.p-1 {
+  padding: 4px;
+}
+.px-1 {
+  padding: 0 4px;
+}
+.row-content {
+  min-height: fit-content;
 }
