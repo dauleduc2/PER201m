@@ -543,8 +543,6 @@
     });
 
     $(document).ready(function () {
-      $('[data-toggle="tooltip"]').tooltip();
-
       $("#loginModalButton").click(function () {
         $("#loginModal").modal("toggle");
       });
@@ -552,6 +550,8 @@
       $("#reserveFormButton").click(function () {
         $("#reserveForm").modal("toggle");
       });
+
+      $('[data-toggle="tooltip"]').tooltip();
     });
   </script>
 </html>
