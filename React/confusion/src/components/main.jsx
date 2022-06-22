@@ -3,7 +3,8 @@ import { Navbar, NavbarBrand } from "reactstrap";
 import { DISHES } from "../shared/dish";
 import DishDetail from "./dishDetail";
 import Menu from "./Menu";
-
+import Header from "./header";
+import Footer from "./footer";
 function Main() {
   const [dishes, setDishes] = useState(DISHES);
 
@@ -15,11 +16,8 @@ function Main() {
 
   return (
     <div className="">
-      <Navbar dark color="primary">
-        <div className="container">
-          <NavbarBrand href={"/"}>Ristorante Con Fusion</NavbarBrand>
-        </div>
-      </Navbar>
+      <Header />
+
       <div className="container">
         <Menu dishes={dishes} onClick={_onDishSelect} />
         {selectedDish !== null && (
@@ -28,6 +26,7 @@ function Main() {
           />
         )}
       </div>
+      <Footer />
     </div>
   );
 }
