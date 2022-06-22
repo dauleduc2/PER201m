@@ -3,7 +3,9 @@ import { Navbar, NavbarBrand } from "reactstrap";
 import Welcome from "./components/welcome";
 import Comment from "./components/comment";
 import Car from "./components/car";
-import Menu from "./components/MenuComponent";
+import Menu from "./components/Menu";
+import { DISHES } from "../shared/dish";
+import { useState } from "react";
 
 const commentData = {
   date: new Date(),
@@ -15,9 +17,10 @@ const commentData = {
 };
 
 function App() {
+  const [dishes, setDishes] = useState(DISHES);
   return (
     <div className="App">
-      <Menu />
+      <Menu dishes={dishes} />
     </div>
   );
 }
